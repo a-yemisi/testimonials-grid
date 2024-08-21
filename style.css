@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 0%, 90%);
+}
+
+#testimonials-grids {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  font-family: "Barlow Semi Condensed";
+  grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+}
+
+#testimonials-grids .comments div,
+h2,
+p {
+  margin: 0.6rem 0;
+}
+
+#testimonials-grids .comments h2,
+h3 {
+  font-weight: 500;
+}
+
+#testimonials-grids .comments p {
+  opacity: 0.7;
+}
+
+#testimonials-grids .comments div p {
+  margin: 0;
+  opacity: 0.5;
+}
+
+#testimonials-grids .commenters-info {
+  display: flex;
+  align-items: center;
+}
+
+#testimonials-grids .commenters-info img {
+  border-radius: 2.5rem;
+  width: 2rem;
+  align-self: center;
+}
+
+#testimonials-grids .commenters-info div {
+  margin: 0 1rem;
+}
+
+#testimonials-grids .comments {
+  border-radius: 0.6rem;
+  padding: 2rem;
+  box-shadow: 0 0 0.7rem hsl(0, 0%, 81%);
+}
+
+#testimonials-grids .daniel-comment {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 81%);
+  position: relative;
+}
+
+#testimonials-grids .daniel-comment #quotation-pattern {
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  opacity: 0.3;
+}
+
+#testimonials-grids .jonathan-comment {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 81%);
+}
+
+#testimonials-grids .jeanette-comment {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+}
+
+#testimonials-grids .patrick-comment {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 81%);
+}
+
+#testimonials-grids .kira-comment {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+}
+
+@media (min-width: 60rem) {
+  body {
+    height: 100dvh;
+    align-content: center;
+  }
+  #testimonials-grids {
+    max-width: 75rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    grid-template-areas:
+      "daniel-comment daniel-comment jonathan-comment kira-comment"
+      "jeanette-comment patrick-comment patrick-comment kira-comment";
+  }
+
+  #testimonials-grids .daniel-comment {
+    grid-area: daniel-comment;
+  }
+
+  #testimonials-grids .jonathan-comment {
+    grid-area: jonathan-comment;
+  }
+
+  #testimonials-grids .kira-comment {
+    grid-area: kira-comment;
+  }
+
+  #testimonials-grids .jeanette-comment {
+    grid-area: jeanette-comment;
+  }
+
+  #testimonials-grids .patrick-comment {
+    grid-area: patrick-comment;
+  }
+}
